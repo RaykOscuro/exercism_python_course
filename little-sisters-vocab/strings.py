@@ -56,3 +56,19 @@ def adjective_to_verb(sentence, index):
     """
 
     return re.sub(r"[,]|[.]","",sentence.split()[index])+"en"
+
+def decode(message_file):
+  with open(message_file, "r") as f:
+    # print(len(f.read().splitlines()))
+    message_dict = {int(line.split()[0]): line.split()[1] for line in f}
+
+  step = 1
+  decoded_message = []
+  current_index = 1
+  while current_index in message_dict:
+    decoded_message.append(message_dict[current_index])
+    step += 1
+    current_index += step
+  return ' '.join(decoded_message)
+
+print(decode("message.txt"))
