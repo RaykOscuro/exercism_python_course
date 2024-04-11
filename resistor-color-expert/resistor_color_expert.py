@@ -1,4 +1,13 @@
 def resistor_label(colors):
+    """
+    Calculates the resistance value of a resistor based on the color bands provided and returns the value with the appropriate unit and tolerance.
+
+    Parameters:
+    colors (list): A list of strings representing the colors of the bands on the resistor.
+
+    Returns:
+    str: The resistance value of the resistor with the appropriate unit and tolerance.
+    """
     color_mappings = {"black": 0, "brown": 1, "red": 2, "orange": 3, "yellow": 4, "green": 5, "blue": 6, "violet": 7, "grey": 8, "white": 9}
     tolerance_mappings = {"grey": "0.05%", "violet": "0.1%", "blue": "0.25%", "green": "0.5%", "brown": "1%", "red": "2%", "gold": "5%", "silver": "10%"}
     if len(colors) == 1:
