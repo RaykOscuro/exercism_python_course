@@ -1,11 +1,11 @@
 def recite(start_verse, end_verse):
     """
     Generate verses of "The House That Jack Built" starting from a given verse number to an end verse number.
-    
+
     Parameters:
     - start_verse: int, the starting verse number
     - end_verse: int, the ending verse number
-    
+
     Returns:
     - list of strings, verses of "The House That Jack Built" from the starting verse to the ending verse
     """
